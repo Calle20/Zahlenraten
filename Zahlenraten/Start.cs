@@ -176,19 +176,22 @@ namespace Zahlenraten
         {
             if (radioButtonLeicht.Checked)
             {
-                temp0 = Versuch.Text;
-                int temp = Bereich - 1;
-                if (Bereich == 0)
+                if (Bereich != 0)
                 {
-                    Versuch.Text = "";
-                }
-                if (Bereich > 0)
-                {
-                    Versuch.Text = temp.ToString();
-                }
+                    temp0 = Versuch.Text;
+                    int temp = Bereich - 1;
+                    if (Bereich == 0)
+                    {
+                        Versuch.Text = "";
+                    }
+                    if (Bereich > 0)
+                    {
+                        Versuch.Text = temp.ToString();
+                    }
                 Versuch.Enabled = false;
                 Tutorial_Einstellungen.Ändern(true);
                 Schreiben(Bereich);
+                }
             }
             if (radioButtonSchwer.Checked)
             {
